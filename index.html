@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ziqi (Charlie) Liu</title>
+    <meta
+      name="description"
+      content="Personal academic homepage of Ziqi (Charlie) Liu, incoming M.S. student in ECE at Carnegie Mellon University."
+    />
+    <meta name="author" content="Ziqi Liu" />
+    <meta property="og:title" content="Ziqi (Charlie) Liu" />
+    <meta
+      property="og:description"
+      content="Research in agentic RL, self-evolving agents, LLM post-training, and time series forecasting."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#fffefc" />
+    <link rel="canonical" href="https://sunbus100.github.io/" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar" aria-label="Site header">
+      <div class="topbar-inner">
+        <a class="breadcrumb" href="#main" aria-label="Home">Ziqi (Charlie) Liu</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">☾</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section class="hero" aria-labelledby="name">
+        <aside class="profile-card" aria-label="Profile links">
+          <div class="monogram" aria-hidden="true">
+            <span>ZL</span>
+          </div>
+
+          <div class="contact-row">
+            <a class="contact-email" href="mailto:liucharlie443@gmail.com">Email</a>
+            <a class="contact-github" href="https://github.com/sunbus100" rel="noopener noreferrer">GitHub</a>
+            <a
+              class="contact-scholar"
+              href="https://scholar.google.com/citations?user=BevpNjAAAAAJ&hl=en"
+              rel="noopener noreferrer"
+            >
+              Google Scholar
+            </a>
+            <a class="contact-cv" id="cv-link" href="#" hidden>CV</a>
+          </div>
+        </aside>
+
+        <div class="hero-main">
+          <h1 id="name">Ziqi (Charlie) Liu</h1>
+          <p class="chinese-name">刘子琦</p>
+
+          <div class="intro">
+            <p>
+              I am an incoming M.S. student in Electrical and Computer Engineering at
+              <strong>Carnegie Mellon University</strong>. I received my undergraduate degree
+              from the <strong>University of Liverpool</strong>.
+            </p>
+            <p>
+              My research interests center on agentic reinforcement learning, self-evolving
+              agents, LLM post-training, and time series forecasting. I am actively looking
+              for internship opportunities. Feel free to reach out if you think I am a good fit!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="research" class="section" aria-labelledby="research-heading">
+        <h2 id="research-heading">🌻 Research Interests</h2>
+        <ul class="interest-list">
+          <li>Agentic reinforcement learning for adaptive, tool-using systems</li>
+          <li>Self-evolving agents and multi-agent reasoning frameworks</li>
+          <li>LLM post-training for reasoning, alignment, and reliability</li>
+          <li>Time series forecasting with efficient frequency-aware models</li>
+        </ul>
+      </section>
+
+      <section class="section" aria-labelledby="news-heading">
+        <h2 id="news-heading">🗞️ Recent News</h2>
+        <div class="news-list">
+          <article class="news-item">
+            <time datetime="2026-04">Apr 2026</time>
+            <p><em>RAM-SD</em> was accepted to ACL 2026 Main.</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-01">Jan 2026</time>
+            <p><em>Following the TRACE</em> was accepted to ICASSP 2026.</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-11">Nov 2025</time>
+            <p><em>SEVADE</em> was accepted to AAAI 2026.</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-06">Jun 2025</time>
+            <p><em>CAF-I</em> was accepted as an oral paper at ICML 2025 CFAgentic.</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2025-03">Mar 2025</time>
+            <p><em>FreqMoE</em> appeared at AISTATS 2025.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="publications" class="section" aria-labelledby="publications-heading">
+        <h2 id="publications-heading">📜 Selected Publications</h2>
+        <p class="section-note">
+          Please see my
+          <a href="https://scholar.google.com/citations?user=BevpNjAAAAAJ&hl=en" rel="noopener noreferrer">
+            Google Scholar
+          </a>
+          profile for the full list.
+        </p>
+
+        <ol class="publication-list">
+          <li class="publication">
+            <h3>RAM-SD: Retrieval-Augmented Multi-Agent Framework for Sarcasm Detection</h3>
+            <p class="authors">Ziyang Zhou*, <strong>Ziqi Liu*</strong>, Yan Wang, Yiming Lin, Yangbin Chen</p>
+            <p class="venue">ACL 2026 Main</p>
+            <p class="links">
+              <a href="https://arxiv.org/pdf/2601.17002" rel="noopener noreferrer">
+                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                ArXiv
+              </a>
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3>Following the TRACE: A Structured Path to Empathetic Response Generation with Multi-Agent Models</h3>
+            <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Haiyang Zhang, Yangbin Chen</p>
+            <p class="venue">ICASSP 2026</p>
+            <p class="links">
+              <a href="https://arxiv.org/abs/2509.21849" rel="noopener noreferrer">
+                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                ArXiv
+              </a>
+              <a href="https://github.com/sunbus100/TRACE" rel="noopener noreferrer">
+                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                GitHub
+              </a>
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3>SEVADE: Self-Evolving Multi-Agent Analysis with Decoupled Evaluation for Hallucination-Resistant Irony Detection</h3>
+            <p class="authors">
+              <strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Mingxuan Hu, Yushan Pan, Zhijie Xu, Yangbin Chen
+            </p>
+            <p class="venue">AAAI 2026</p>
+            <p class="links">
+              <a href="https://arxiv.org/pdf/2508.06803" rel="noopener noreferrer">
+                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                ArXiv
+              </a>
+              <a href="https://github.com/sunbus100/SEVADE" rel="noopener noreferrer">
+                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                GitHub
+              </a>
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3>CAF-I: A Collaborative Multi-Agent Framework for Enhanced Irony Detection with Large Language Models</h3>
+            <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Mingxuan Hu</p>
+            <p class="venue">ICML 2025 Workshop on Collaborative and Federated Agentic Workflows, Oral</p>
+            <p class="links">
+              <a href="https://openreview.net/forum?id=QaRYKGk4db" rel="noopener noreferrer">
+                <span class="link-icon link-icon-review" aria-hidden="true">OR</span>
+                OpenReview
+              </a>
+              <a href="https://github.com/sunbus100/CAF-I" rel="noopener noreferrer">
+                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                GitHub
+              </a>
+            </p>
+          </li>
+
+          <li class="publication">
+            <h3>FreqMoE: Enhancing Time Series Forecasting through Frequency Decomposition Mixture of Experts</h3>
+            <p class="authors"><strong>Ziqi Liu</strong></p>
+            <p class="venue">AISTATS 2025</p>
+            <p class="links">
+              <a href="https://arxiv.org/pdf/2501.15125" rel="noopener noreferrer">
+                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                ArXiv
+              </a>
+              <a href="https://github.com/sunbus100/FreqMoE-main" rel="noopener noreferrer">
+                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                GitHub
+              </a>
+            </p>
+          </li>
+        </ol>
+        <p class="footnote">* Equal contribution.</p>
+      </section>
+
+      <section id="experience" class="section" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">📍 Research / Work Experience</h2>
+        <div class="experience-list">
+          <article class="experience">
+            <img class="org-logo logo-shopee" src="assets/logos/shopee.png" alt="Shopee logo" width="44" height="44" />
+            <div class="experience-body">
+              <h3>Shopee</h3>
+              <p class="meta">Research Intern · Mar 2026 – Present</p>
+              <p>LLM post-training.</p>
+            </div>
+          </article>
+          <article class="experience">
+            <img class="org-logo logo-yale" src="assets/logos/yale.png" alt="Yale University logo" width="44" height="44" />
+            <div class="experience-body">
+              <h3>Yale University</h3>
+              <p class="meta">Research Intern · Sep 2025 – Mar 2026</p>
+              <p>Self-evolving agents; agentic RL.</p>
+            </div>
+          </article>
+          <article class="experience">
+            <img class="org-logo logo-eigen" src="assets/logos/eigen.svg" alt="Eigen AI logo" width="44" height="44" />
+            <div class="experience-body">
+              <h3>Eigen AI</h3>
+              <p class="meta">Research Intern · Sep 2025 – Jan 2026</p>
+              <p>Agentic RL.</p>
+            </div>
+          </article>
+          <article class="experience">
+            <img class="org-logo logo-ecnu" src="assets/logos/ecnu.png" alt="East China Normal University logo" width="44" height="44" />
+            <div class="experience-body">
+              <h3>East China Normal University</h3>
+              <p class="meta">Research Assistant · Sep 2024 – Sep 2025</p>
+              <p>AI for medicine.</p>
+            </div>
+          </article>
+          <article class="experience">
+            <img class="org-logo logo-inspur" src="assets/logos/inspur.png" alt="Inspur logo" width="44" height="44" />
+            <div class="experience-body">
+              <h3>Inspur</h3>
+              <p class="meta">Research Intern · Jan 2024 – Mar 2024</p>
+              <p>LLM post-training; Text-to-SQL.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">🎓 Education</h2>
+        <div class="compact-list">
+          <article>
+            <h3>Carnegie Mellon University</h3>
+            <p>Incoming M.S. student, Electrical and Computer Engineering · 2026 – 2028</p>
+          </article>
+          <article>
+            <h3>University of Liverpool</h3>
+            <p>Undergraduate study · 2022 – 2026</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="service-heading">
+        <h2 id="service-heading">🤝 Service</h2>
+        <ul class="service-list">
+          <li>Reviewer, AAAI 2026</li>
+          <li>Reviewer, ICONIP 2025</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p>Updated June 2026.</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
