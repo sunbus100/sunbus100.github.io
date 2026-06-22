@@ -44,28 +44,52 @@
       </div>
     </header>
 
-    <main id="main" class="page">
-      <section class="hero" aria-labelledby="name">
-        <aside class="profile-card" aria-label="Profile links">
-          <div class="monogram" aria-hidden="true">
-            <span>ZL</span>
-          </div>
+    <main id="main" class="layout-shell">
+      <aside class="profile-card" aria-label="Profile links">
+        <div class="monogram" aria-hidden="true">
+          <span>ZL</span>
+        </div>
 
-          <div class="contact-row">
-            <a class="contact-email" href="mailto:liucharlie443@gmail.com">Email</a>
-            <a class="contact-github" href="https://github.com/sunbus100" rel="noopener noreferrer">GitHub</a>
-            <a
-              class="contact-scholar"
-              href="https://scholar.google.com/citations?user=BevpNjAAAAAJ&hl=en"
-              rel="noopener noreferrer"
-            >
-              Google Scholar
-            </a>
-            <a class="contact-cv" id="cv-link" href="#" hidden>CV</a>
-          </div>
-        </aside>
+        <div class="contact-row">
+          <a class="contact-email" href="mailto:liucharlie443@gmail.com">
+            <span class="contact-icon" aria-hidden="true">📮</span>
+            Email
+          </a>
+          <a class="contact-github" href="https://github.com/sunbus100" rel="noopener noreferrer">
+            <span class="contact-icon contact-icon-github" aria-hidden="true">
+              <svg class="contact-svg" viewBox="0 0 16 16" focusable="false">
+                <path d="M8 0.3A7.8 7.8 0 0 0 5.5 15.5c0.4 0.1 0.5-0.2 0.5-0.4v-1.4c-2.2 0.5-2.7-0.9-2.7-0.9-0.4-0.9-0.9-1.1-0.9-1.1-0.7-0.5 0.1-0.5 0.1-0.5 0.8 0.1 1.2 0.8 1.2 0.8 0.7 1.2 1.9 0.9 2.3 0.7 0.1-0.5 0.3-0.9 0.5-1.1-1.8-0.2-3.6-0.9-3.6-3.9 0-0.9 0.3-1.6 0.8-2.1-0.1-0.2-0.4-1 0.1-2.1 0 0 0.7-0.2 2.2 0.8A7.5 7.5 0 0 1 8 4c0.7 0 1.4 0.1 2 0.3 1.5-1 2.2-0.8 2.2-0.8 0.4 1.1 0.2 1.9 0.1 2.1 0.5 0.6 0.8 1.3 0.8 2.1 0 3-1.8 3.7-3.6 3.9 0.3 0.3 0.6 0.8 0.6 1.6v2c0 0.2 0.1 0.5 0.6 0.4A7.8 7.8 0 0 0 8 0.3Z" />
+              </svg>
+            </span>
+            GitHub
+          </a>
+          <a
+            class="contact-scholar"
+            href="https://scholar.google.com/citations?user=BevpNjAAAAAJ&hl=en"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-icon contact-icon-scholar" aria-hidden="true">G</span>
+            Google Scholar
+          </a>
+          <a class="contact-cv" id="cv-link" href="#" hidden>
+            <span class="contact-icon contact-icon-cv" aria-hidden="true">
+              <svg class="contact-svg contact-svg-stroke" viewBox="0 0 16 16" focusable="false">
+                <path d="M4 1.8h5.2L12 4.6v9.6H4z" />
+                <path d="M9 1.8v3h3" />
+                <path d="M5.8 8h4.4M5.8 10.2h4.4M5.8 12.4h2.7" />
+              </svg>
+            </span>
+            Resume
+          </a>
+          <a class="contact-linkedin" href="#" aria-disabled="true">
+            <span class="contact-icon contact-icon-linkedin" aria-hidden="true">in</span>
+            LinkedIn
+          </a>
+        </div>
+      </aside>
 
-        <div class="hero-main">
+      <div class="page">
+        <section class="hero" aria-labelledby="name">
           <h1 id="name">Ziqi (Charlie) Liu</h1>
           <p class="chinese-name">刘子琦</p>
 
@@ -77,12 +101,11 @@
             </p>
             <p>
               My research interests center on agentic reinforcement learning, self-evolving
-              agents, LLM post-training, and time series forecasting. I am actively looking
-              for internship opportunities. Feel free to reach out if you think I am a good fit!
+              agents, LLM post-training, and time series forecasting.
+              <strong>I am actively looking for internship opportunities. Feel free to reach out if you think I am a good fit!</strong>
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section id="research" class="section" aria-labelledby="research-heading">
         <h2 id="research-heading">🌻 Research Interests</h2>
@@ -108,14 +131,6 @@
           <article class="news-item">
             <time datetime="2025-11">Nov 2025</time>
             <p><em>SEVADE</em> was accepted to AAAI 2026.</p>
-          </article>
-          <article class="news-item">
-            <time datetime="2025-06">Jun 2025</time>
-            <p><em>CAF-I</em> was accepted as an oral paper at ICML 2025 CFAgentic.</p>
-          </article>
-          <article class="news-item">
-            <time datetime="2025-03">Mar 2025</time>
-            <p><em>FreqMoE</em> appeared at AISTATS 2025.</p>
           </article>
         </div>
       </section>
@@ -180,7 +195,7 @@
           <li class="publication">
             <h3>CAF-I: A Collaborative Multi-Agent Framework for Enhanced Irony Detection with Large Language Models</h3>
             <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Mingxuan Hu</p>
-            <p class="venue">ICML 2025 Workshop on Collaborative and Federated Agentic Workflows, Oral</p>
+            <p class="venue"><span class="award-icon" aria-hidden="true">🏆</span>ICML 2025@CFAgentic, Best Paper Candidate</p>
             <p class="links">
               <a href="https://openreview.net/forum?id=QaRYKGk4db" rel="noopener noreferrer">
                 <span class="link-icon link-icon-review" aria-hidden="true">OR</span>
@@ -283,6 +298,7 @@
       <footer class="footer">
         <p>Updated June 2026.</p>
       </footer>
+      </div>
     </main>
 
     <script src="script.js"></script>

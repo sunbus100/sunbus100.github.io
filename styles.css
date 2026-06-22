@@ -103,7 +103,7 @@ strong {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  width: min(100%, 1040px);
+  width: min(100%, 1180px);
   margin: 0 auto;
   padding: 10px 24px;
 }
@@ -158,28 +158,30 @@ strong {
   line-height: 1;
 }
 
-.page {
-  width: min(100%, 940px);
+.layout-shell {
+  display: grid;
+  grid-template-columns: 178px minmax(0, 940px);
+  align-items: start;
+  gap: 48px;
+  width: min(100%, 1180px);
   margin: 0 auto;
   padding: 72px 24px 48px;
 }
 
-.hero {
-  display: grid;
-  grid-template-columns: 178px minmax(0, 1fr);
-  align-items: start;
-  gap: 36px;
-  padding-bottom: 24px;
+.page {
+  min-width: 0;
 }
 
 .profile-card {
   display: grid;
   gap: 14px;
   justify-items: stretch;
+  position: sticky;
+  top: 86px;
 }
 
-.hero-main {
-  min-width: 0;
+.hero {
+  padding-bottom: 24px;
 }
 
 .monogram {
@@ -254,26 +256,33 @@ h1 {
   border-color: color-mix(in srgb, var(--chip) 30%, var(--chip-border));
   background: color-mix(in srgb, var(--chip-bg) 88%, var(--surface));
   color: var(--chip);
+  gap: 7px;
+  justify-content: flex-start;
 }
 
-.contact-email {
+.contact-row .contact-email {
   --chip: #c9473f;
   --chip-bg: #fff0ee;
 }
 
-.contact-github {
+.contact-row .contact-github {
   --chip: #9a7214;
   --chip-bg: #fff7d6;
 }
 
-.contact-scholar {
+.contact-row .contact-scholar {
   --chip: #2b66c3;
   --chip-bg: #eef4ff;
 }
 
-.contact-cv {
+.contact-row .contact-cv {
   --chip: #2f855a;
   --chip-bg: #edf9f1;
+}
+
+.contact-row .contact-linkedin {
+  --chip: #0a66c2;
+  --chip-bg: #eef6ff;
 }
 
 :root[data-theme="dark"] .contact-email {
@@ -296,10 +305,70 @@ h1 {
   --chip-bg: #1d3126;
 }
 
+:root[data-theme="dark"] .contact-linkedin {
+  --chip: #91c8ff;
+  --chip-bg: #18304a;
+}
+
 .contact-row a:hover {
   border-color: color-mix(in srgb, var(--chip) 58%, var(--border));
   background: color-mix(in srgb, var(--chip-bg) 72%, var(--surface));
   color: var(--chip);
+}
+
+.contact-row a[aria-disabled="true"] {
+  cursor: default;
+}
+
+.contact-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  border-radius: 4px;
+  color: var(--chip);
+  font-size: 0.78rem;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.contact-icon-github {
+  background: #24292f;
+  color: #ffffff;
+}
+
+.contact-icon-scholar {
+  border-radius: 50%;
+  background: #4285f4;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.contact-icon-cv {
+  background: #2f855a;
+  color: #ffffff;
+}
+
+.contact-icon-linkedin {
+  background: #0a66c2;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+}
+
+.contact-svg {
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.contact-svg-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
 }
 
 .links a:hover {
@@ -410,6 +479,11 @@ h1 {
   font-weight: 560;
 }
 
+.award-icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -515,19 +589,17 @@ h1 {
     display: none;
   }
 
-  .page {
-    padding: 46px 18px 36px;
-  }
-
-  .hero {
+  .layout-shell {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
+    padding: 46px 18px 36px;
   }
 
   .profile-card {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 14px;
+    position: static;
   }
 
   .monogram {
