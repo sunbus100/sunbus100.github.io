@@ -103,7 +103,7 @@ strong {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  width: min(100%, 1180px);
+  width: min(100%, 1240px);
   margin: 0 auto;
   padding: 10px 24px;
 }
@@ -160,10 +160,10 @@ strong {
 
 .layout-shell {
   display: grid;
-  grid-template-columns: 178px minmax(0, 940px);
+  grid-template-columns: 224px minmax(0, 940px);
   align-items: start;
-  gap: 48px;
-  width: min(100%, 1180px);
+  gap: 56px;
+  width: min(100%, 1240px);
   margin: 0 auto;
   padding: 72px 24px 48px;
 }
@@ -174,7 +174,7 @@ strong {
 
 .profile-card {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   justify-items: stretch;
   position: sticky;
   top: 86px;
@@ -187,7 +187,7 @@ strong {
 .monogram {
   display: grid;
   place-items: center;
-  width: 96px;
+  width: 132px;
   aspect-ratio: 1;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -200,7 +200,7 @@ strong {
 .monogram span {
   color: var(--accent-strong);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2rem;
+  font-size: 2.55rem;
   font-weight: 650;
   letter-spacing: 0;
 }
@@ -228,7 +228,7 @@ h1 {
 
 .contact-row {
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .contact-row a,
@@ -236,15 +236,15 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 30px;
+  min-height: 38px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--surface);
   color: var(--link);
-  font-size: 0.9rem;
+  font-size: 0.94rem;
   font-weight: 520;
   line-height: 1.2;
-  padding: 5px 10px;
+  padding: 8px 12px;
   text-decoration: none;
 }
 
@@ -256,7 +256,7 @@ h1 {
   border-color: color-mix(in srgb, var(--chip) 30%, var(--chip-border));
   background: color-mix(in srgb, var(--chip-bg) 88%, var(--surface));
   color: var(--chip);
-  gap: 7px;
+  gap: 9px;
   justify-content: flex-start;
 }
 
@@ -323,12 +323,12 @@ h1 {
 .contact-icon {
   display: inline-grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
-  flex: 0 0 18px;
-  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 5px;
   color: var(--chip);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 750;
   line-height: 1;
 }
@@ -354,12 +354,12 @@ h1 {
   background: #0a66c2;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
 }
 
 .contact-svg {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   fill: currentColor;
 }
 
@@ -494,6 +494,7 @@ h1 {
 
 .links a {
   min-height: 27px;
+  border-radius: 6px;
   font-size: 0.84rem;
   padding: 4px 9px;
 }
@@ -596,14 +597,14 @@ h1 {
   }
 
   .profile-card {
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    grid-template-columns: 1fr;
+    align-items: start;
     gap: 14px;
     position: static;
   }
 
   .monogram {
-    width: 82px;
+    width: 104px;
   }
 
   .contact-row {
