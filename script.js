@@ -1,7 +1,6 @@
 (function () {
   var root = document.documentElement;
   var toggle = document.querySelector(".theme-toggle");
-  var icon = document.querySelector(".theme-icon");
 
   function setTheme(theme) {
     root.dataset.theme = theme;
@@ -10,9 +9,6 @@
     } catch (e) {}
     if (toggle) {
       toggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-    }
-    if (icon) {
-      icon.textContent = theme === "dark" ? "☀" : "☾";
     }
   }
 

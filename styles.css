@@ -154,11 +154,27 @@ strong {
   width: 34px;
   border: 1px solid transparent;
   background: transparent;
+  color: var(--text);
   cursor: pointer;
 }
 
 .theme-icon {
-  line-height: 1;
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.theme-icon-sun,
+:root[data-theme="dark"] .theme-icon-moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-sun {
+  display: block;
 }
 
 .layout-shell {
@@ -183,8 +199,8 @@ strong {
   top: 86px;
 }
 
-.hero {
-  padding-bottom: 24px;
+.section.hero {
+  padding-top: 0;
 }
 
 .monogram {
@@ -217,11 +233,18 @@ strong {
 }
 
 .profile-name {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   color: var(--text);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.profile-info .profile-chinese-name {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 1rem;
 }
 
 .profile-role {
@@ -269,20 +292,6 @@ h2,
 h3,
 p {
   margin-block-start: 0;
-}
-
-h1 {
-  margin-block-end: 4px;
-  font-size: clamp(2.2rem, 6vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: 0;
-}
-
-.chinese-name {
-  margin-block-end: 22px;
-  color: var(--muted);
-  font-size: 1.08rem;
 }
 
 .contact-row {
@@ -457,11 +466,25 @@ h1 {
 }
 
 .section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 14px;
   font-size: 1.55rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0;
+}
+
+.section-icon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
 .section h3 {
@@ -554,11 +577,15 @@ h1 {
   object-fit: contain;
 }
 
+:root[data-theme="dark"] .pub-thumb {
+  filter: brightness(0.86);
+}
+
 .pub-body {
   min-width: 0;
 }
 
-.pub-year {
+.pub-venue {
   display: inline-block;
   margin-bottom: 4px;
   border-radius: 999px;
@@ -574,7 +601,6 @@ h1 {
 .authors,
 .venue,
 .meta,
-.compact-list p,
 .experience p {
   margin-bottom: 4px;
 }
@@ -631,8 +657,7 @@ h1 {
   font-size: 0.56rem;
 }
 
-.experience-list,
-.compact-list {
+.experience-list {
   display: grid;
   gap: 12px;
 }
@@ -660,7 +685,8 @@ h1 {
 
 .logo-shopee,
 .logo-yale,
-.logo-ecnu {
+.logo-ecnu,
+.logo-cmu {
   padding: 0;
 }
 
@@ -669,12 +695,15 @@ h1 {
   padding: 3px;
 }
 
+.logo-liverpool {
+  padding: 3px;
+}
+
 .experience-body {
   min-width: 0;
 }
 
-.experience .meta,
-.compact-list p {
+.experience .meta {
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -817,6 +846,13 @@ h1 {
 
 .footer p {
   margin-bottom: 0;
+}
+
+/* The sticky sidebar needs ~670px of height; let it scroll on shorter screens. */
+@media (max-height: 700px) {
+  .profile-card {
+    position: static;
+  }
 }
 
 @media (max-width: 720px) {
