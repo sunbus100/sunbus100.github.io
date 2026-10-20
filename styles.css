@@ -684,9 +684,31 @@ h1 {
   font-size: 0.95rem;
 }
 
+.visitor-widget {
+  display: grid;
+  gap: 10px;
+  width: min(100%, 340px);
+}
+
+.visitor-map {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #2d78ad;
+  box-shadow: var(--card-shadow);
+}
+
+.visitor-map a,
+.visitor-map img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .visitor-counter {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
   border: 1px solid var(--border);
   border-radius: 10px;
