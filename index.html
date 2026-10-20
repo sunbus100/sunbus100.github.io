@@ -6,7 +6,7 @@
     <title>Ziqi (Charlie) Liu</title>
     <meta
       name="description"
-      content="Personal academic homepage of Ziqi (Charlie) Liu, incoming M.S. student in ECE at Carnegie Mellon University."
+      content="Personal academic homepage of Ziqi (Charlie) Liu, M.S. student in ECE at Carnegie Mellon University."
     />
     <meta name="author" content="Ziqi Liu" />
     <meta property="og:title" content="Ziqi (Charlie) Liu" />
@@ -19,7 +19,10 @@
     <link rel="canonical" href="https://sunbus100.github.io/" />
     <script>
       (function () {
-        var stored = localStorage.getItem("theme");
+        var stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (e) {}
         var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         var theme = stored || (prefersDark ? "dark" : "light");
         document.documentElement.dataset.theme = theme;
@@ -50,6 +53,22 @@
           <span>ZL</span>
         </div>
 
+        <div class="profile-info">
+          <p class="profile-name">Ziqi (Charlie) Liu</p>
+          <p class="profile-role">M.S. Student</p>
+          <p class="profile-affiliation">
+            <a href="https://www.ece.cmu.edu/" rel="noopener noreferrer">Electrical &amp; Computer Engineering</a><br />
+            <a href="https://www.cmu.edu/" rel="noopener noreferrer">Carnegie Mellon University</a>
+          </p>
+          <p class="profile-location">
+            <svg class="location-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            Pittsburgh, PA
+          </p>
+        </div>
+
         <div class="contact-row">
           <a class="contact-email" href="mailto:liucharlie443@gmail.com">
             <span class="contact-icon" aria-hidden="true">📮</span>
@@ -71,7 +90,7 @@
             <span class="contact-icon contact-icon-scholar" aria-hidden="true">G</span>
             Google Scholar
           </a>
-          <a class="contact-cv" id="cv-link" href="#" hidden>
+          <a class="contact-cv" href="assets/Ziqi_Liu_CV.pdf">
             <span class="contact-icon contact-icon-cv" aria-hidden="true">
               <svg class="contact-svg contact-svg-stroke" viewBox="0 0 16 16" focusable="false">
                 <path d="M4 1.8h5.2L12 4.6v9.6H4z" />
@@ -95,14 +114,14 @@
 
           <div class="intro">
             <p>
-              I am an incoming M.S. student in Electrical and Computer Engineering at
+              I am an M.S. student in Electrical and Computer Engineering at
               <strong>Carnegie Mellon University</strong>. I received my undergraduate degree
               from the <strong>University of Liverpool</strong>.
             </p>
             <p>
               My research interests center on agentic reinforcement learning, self-evolving
               agents, LLM post-training, and time series forecasting.
-              <strong>I am actively looking for internship opportunities. Feel free to reach out if you think I am a good fit!</strong>
+              <strong>I am actively looking for 2027 summer internship opportunities. Feel free to reach out if you think I am a good fit!</strong>
             </p>
           </div>
         </section>
@@ -120,20 +139,20 @@
 
       <section class="section" aria-labelledby="news-heading">
         <h2 id="news-heading">🗞️ Recent News</h2>
-        <div class="news-list">
-          <article class="news-item">
-            <time datetime="2026-04">Apr 2026</time>
-            <p>Excited that another multi-agent paper was accepted to ACL 2026 Main!</p>
-          </article>
-          <article class="news-item">
-            <time datetime="2026-01">Jan 2026</time>
-            <p>Happy to share that our multi-agent paper was accepted to ICASSP 2026!</p>
-          </article>
-          <article class="news-item">
-            <time datetime="2025-11">Nov 2025</time>
-            <p>Thrilled that our self-evolving multi-agent paper was accepted to AAAI 2026! Hope to see you in Singapore!</p>
-          </article>
-        </div>
+        <ul class="news-list">
+          <li>
+            <strong><time datetime="2026-04">Apr 2026</time>:</strong>
+            Excited that another multi-agent paper was accepted to <strong>ACL 2026 Main</strong>!
+          </li>
+          <li>
+            <strong><time datetime="2026-01">Jan 2026</time>:</strong>
+            Happy to share that our multi-agent paper was accepted to <strong>ICASSP 2026</strong>!
+          </li>
+          <li>
+            <strong><time datetime="2025-11">Nov 2025</time>:</strong>
+            Thrilled that our self-evolving multi-agent paper was accepted to <strong>AAAI 2026</strong>! Hope to see you in Singapore!
+          </li>
+        </ul>
       </section>
 
       <section id="publications" class="section" aria-labelledby="publications-heading">
@@ -148,81 +167,111 @@
 
         <ol class="publication-list">
           <li class="publication">
-            <h3>RAM-SD: Retrieval-Augmented Multi-Agent Framework for Sarcasm Detection</h3>
-            <p class="authors">Ziyang Zhou*, <strong>Ziqi Liu*</strong>, Yan Wang, Yiming Lin, Yangbin Chen</p>
-            <p class="venue">ACL 2026 Main</p>
-            <p class="links">
-              <a href="https://arxiv.org/pdf/2601.17002" rel="noopener noreferrer">
-                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
-                ArXiv
-              </a>
-            </p>
+            <a class="pub-thumb" href="assets/pubs/ram-sd.webp">
+              <img src="assets/pubs/ram-sd.webp" alt="RAM-SD framework overview" width="990" height="564" loading="lazy" />
+            </a>
+            <div class="pub-body">
+              <span class="pub-year">2026</span>
+              <h3>RAM-SD: Retrieval-Augmented Multi-Agent Framework for Sarcasm Detection</h3>
+              <p class="authors">Ziyang Zhou*, <strong>Ziqi Liu*</strong>, Yan Wang, Yiming Lin, Yangbin Chen</p>
+              <p class="venue">ACL 2026 Main</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/2601.17002" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                  ArXiv
+                </a>
+              </p>
+            </div>
           </li>
 
           <li class="publication">
-            <h3>Following the TRACE: A Structured Path to Empathetic Response Generation with Multi-Agent Models</h3>
-            <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Haiyang Zhang, Yangbin Chen</p>
-            <p class="venue">ICASSP 2026</p>
-            <p class="links">
-              <a href="https://arxiv.org/abs/2509.21849" rel="noopener noreferrer">
-                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
-                ArXiv
-              </a>
-              <a href="https://github.com/sunbus100/TRACE" rel="noopener noreferrer">
-                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
-                GitHub
-              </a>
-            </p>
+            <a class="pub-thumb" href="assets/pubs/trace.webp">
+              <img src="assets/pubs/trace.webp" alt="TRACE framework overview" width="502" height="479" loading="lazy" />
+            </a>
+            <div class="pub-body">
+              <span class="pub-year">2026</span>
+              <h3>Following the TRACE: A Structured Path to Empathetic Response Generation with Multi-Agent Models</h3>
+              <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Haiyang Zhang, Yangbin Chen</p>
+              <p class="venue">ICASSP 2026</p>
+              <p class="links">
+                <a href="https://arxiv.org/abs/2509.21849" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                  ArXiv
+                </a>
+                <a href="https://github.com/sunbus100/TRACE" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                  GitHub
+                </a>
+              </p>
+            </div>
           </li>
 
           <li class="publication">
-            <h3>SEVADE: Self-Evolving Multi-Agent Analysis with Decoupled Evaluation for Hallucination-Resistant Irony Detection</h3>
-            <p class="authors">
-              <strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Mingxuan Hu, Yushan Pan, Zhijie Xu, Yangbin Chen
-            </p>
-            <p class="venue">AAAI 2026</p>
-            <p class="links">
-              <a href="https://arxiv.org/pdf/2508.06803" rel="noopener noreferrer">
-                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
-                ArXiv
-              </a>
-              <a href="https://github.com/sunbus100/SEVADE" rel="noopener noreferrer">
-                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
-                GitHub
-              </a>
-            </p>
+            <a class="pub-thumb" href="assets/pubs/sevade.webp">
+              <img src="assets/pubs/sevade.webp" alt="SEVADE framework overview" width="976" height="529" loading="lazy" />
+            </a>
+            <div class="pub-body">
+              <span class="pub-year">2026</span>
+              <h3>SEVADE: Self-Evolving Multi-Agent Analysis with Decoupled Evaluation for Hallucination-Resistant Irony Detection</h3>
+              <p class="authors">
+                <strong>Ziqi Liu</strong>, Ziyang Zhou, Yilin Li, Mingxuan Hu, Yushan Pan, Zhijie Xu, Yangbin Chen
+              </p>
+              <p class="venue">AAAI 2026</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/2508.06803" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                  ArXiv
+                </a>
+                <a href="https://github.com/sunbus100/SEVADE" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                  GitHub
+                </a>
+              </p>
+            </div>
           </li>
 
           <li class="publication">
-            <h3>CAF-I: A Collaborative Multi-Agent Framework for Enhanced Irony Detection with Large Language Models</h3>
-            <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Mingxuan Hu</p>
-            <p class="venue"><span class="award-icon" aria-hidden="true">🏆</span>ICML 2025@CFAgentic, Best Paper Candidate</p>
-            <p class="links">
-              <a href="https://openreview.net/forum?id=QaRYKGk4db" rel="noopener noreferrer">
-                <span class="link-icon link-icon-review" aria-hidden="true">OR</span>
-                OpenReview
-              </a>
-              <a href="https://github.com/sunbus100/CAF-I" rel="noopener noreferrer">
-                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
-                GitHub
-              </a>
-            </p>
+            <a class="pub-thumb" href="assets/pubs/caf-i.webp">
+              <img src="assets/pubs/caf-i.webp" alt="CAF-I framework overview" width="1000" height="951" loading="lazy" />
+            </a>
+            <div class="pub-body">
+              <span class="pub-year">2025</span>
+              <h3>CAF-I: A Collaborative Multi-Agent Framework for Enhanced Irony Detection with Large Language Models</h3>
+              <p class="authors"><strong>Ziqi Liu</strong>, Ziyang Zhou, Mingxuan Hu</p>
+              <p class="venue"><span class="award-icon" aria-hidden="true">🏆</span>ICML 2025@CFAgentic, Best Paper Candidate</p>
+              <p class="links">
+                <a href="https://openreview.net/forum?id=QaRYKGk4db" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-review" aria-hidden="true">OR</span>
+                  OpenReview
+                </a>
+                <a href="https://github.com/sunbus100/CAF-I" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                  GitHub
+                </a>
+              </p>
+            </div>
           </li>
 
           <li class="publication">
-            <h3>FreqMoE: Enhancing Time Series Forecasting through Frequency Decomposition Mixture of Experts</h3>
-            <p class="authors"><strong>Ziqi Liu</strong></p>
-            <p class="venue">AISTATS 2025</p>
-            <p class="links">
-              <a href="https://arxiv.org/pdf/2501.15125" rel="noopener noreferrer">
-                <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
-                ArXiv
-              </a>
-              <a href="https://github.com/sunbus100/FreqMoE-main" rel="noopener noreferrer">
-                <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
-                GitHub
-              </a>
-            </p>
+            <a class="pub-thumb" href="assets/pubs/freqmoe.webp">
+              <img src="assets/pubs/freqmoe.webp" alt="FreqMoE model architecture" width="1000" height="536" loading="lazy" />
+            </a>
+            <div class="pub-body">
+              <span class="pub-year">2025</span>
+              <h3>FreqMoE: Enhancing Time Series Forecasting through Frequency Decomposition Mixture of Experts</h3>
+              <p class="authors"><strong>Ziqi Liu</strong></p>
+              <p class="venue">AISTATS 2025</p>
+              <p class="links">
+                <a href="https://arxiv.org/pdf/2501.15125" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-arxiv" aria-hidden="true">Σ</span>
+                  ArXiv
+                </a>
+                <a href="https://github.com/sunbus100/FreqMoE-main" rel="noopener noreferrer">
+                  <span class="link-icon link-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                  GitHub
+                </a>
+              </p>
+            </div>
           </li>
         </ol>
         <p class="footnote">* Equal contribution.</p>
@@ -256,7 +305,7 @@
             </div>
           </article>
           <article class="experience">
-            <img class="org-logo logo-ecnu" src="assets/logos/ecnu.png" alt="East China Normal University logo" width="44" height="44" />
+            <img class="org-logo logo-ecnu" src="assets/logos/ecnu.svg" alt="East China Normal University logo" width="44" height="44" />
             <div class="experience-body">
               <h3>East China Normal University</h3>
               <p class="meta">Research Assistant · Sep 2024 – Sep 2025</p>
@@ -279,7 +328,7 @@
         <div class="compact-list">
           <article>
             <h3>Carnegie Mellon University</h3>
-            <p>Incoming M.S. student, Electrical and Computer Engineering · 2026 – 2028</p>
+            <p>M.S. student, Electrical and Computer Engineering · 2026 – 2028</p>
           </article>
           <article>
             <h3>University of Liverpool</h3>
@@ -297,12 +346,22 @@
         </ul>
       </section>
 
+      <section id="visitors" class="section" aria-labelledby="visitors-heading">
+        <h2 id="visitors-heading">🌍 Visitors</h2>
+        <div class="visitor-counter">
+          <span class="visitor-label">Total views</span>
+          <span class="led-display" data-led-for="busuanzi_value_site_pv" aria-hidden="true"></span>
+          <span id="busuanzi_value_site_pv" class="visually-hidden"></span>
+        </div>
+      </section>
+
       <footer class="footer">
-        <p>Updated August 2026.</p>
+        <p>Updated October 2026.</p>
       </footer>
       </div>
     </main>
 
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
